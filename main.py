@@ -12,11 +12,14 @@ mesaj1 = ["Sık sık tema gibi toprak ve ağaç kurullarına bağış yap.","Yer
 @bot.event
 async def on_ready():
     print(f'{bot.user} olarak giriş yaptım.')
-@bot.command
-async def on_ready(ctx):
-    await ctx.send('Merhaba, "soyle" yazarak kullanabilirsin')
 @bot.command()
 async def soyle(ctx):
     mesaj = random.choice(mesaj1)
     await ctx.send(mesaj)
-bot.run("token")
+@bot.command()
+async def bagis(ctx):
+    await ctx.send("Tema:https://www.tema.org.tr/ , Ağaçlandırma Adına Çalışma Derneği : https://www.agacdernegi.org/")
+@bot.command()
+async def yardim(ctx):
+    await ctx.send('"$soyle" yazarak çalıştırabilirsin :)')
+bot.run("MTEzMDE3MzQyMTM3Mjg1NDQ4Mg.GBog6C.JHXu71xumFU03XAN-JZLUzFGrlHHPFs_JC29Ew")
